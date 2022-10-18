@@ -32,6 +32,36 @@ Pas d'OS "classique"
 - SPI: Serial Peripheral Interface
 - UART: Universal Asynchronous Receive/Transfer
 
+---
+title: ESP32
+titleRow: true
+cols: 2-1
+---
+
+ESP32 / ESP32-S\*
+<br />
+
+<img src="/esp32.png" class="h-60" />
+
+Architecture: xtensa-lx6
+<br />
+Licensed from Tensilica
+
+::right::
+
+ESP32-C\*
+<br />
+
+<img src="/esp32-c3.jpeg" class="h-60" />
+
+Architecture: RISC-V
+<br />
+Open standard instruction set architecture
+
+<!--
+ESP32: Dual core 240Mhz, 520kio RAM, 16Mb Flash
+ESP32-C3: 160Mhz, 400kio RAM
+-->
 
 ---
 layout: quote
@@ -121,6 +151,12 @@ fn main() -> ! {
     }
 }
 ```
+
+<style>
+.slidev-layout.default {
+  background-image: none;
+}
+</style>
 
 ---
 title: 🤔 Pourquoi Rust est adapté pour de l’embarqué ?
@@ -369,35 +405,7 @@ cols: 1-1
 
 # ⌚️ Qu’est-ce que c’est que cette montre ?
 
-<img src="/twatch-pinout.png" class="mx-40 w-130 rounded shadow" />
-
----
-title: ⌚️ Qu’est-ce que c’est que cette montre ?
-titleRow: true
-class: text-center
-cols: 2-3
----
-
-
-ESP32 / ESP32-S\*
-<br />
-
-<img src="/esp32.png" class="h-60" />
-
-Architecture: xtensa-lx6
-<br />
-Licensed from Tensilica
-
-::right::
-
-ESP32-C\*
-<br />
-
-<img src="/esp32-c3.jpeg" class="h-60" />
-
-Architecture: RISC-V
-<br />
-Open standard instruction set architecture
+<img src="/twatch-pinout.png" class="mx-30 mt--8 w-160 rounded shadow" />
 
 ---
 
@@ -774,27 +782,21 @@ cols: 2-1
 </style>
 ---
 
-# 🔮 Next? Sur la montre…
+# 🔮 Next? 
 
- - BLE et connexion avec le téléphone
- - Détection d’activité
+- Sur la montre…
+  - BLE et connexion avec le téléphone
+  - Détection d’activité
+
+- Rust embedded
+  - async/await avec embassy - https://github.com/embassy-rs/embassy
+  - Autres cartes - Apache MyNewt + NimBLE - https://mynewt.apache.org/
+  - RTIC - Real Time Interrupt driven Concurrency - https://rtic.rs/1/book/en/
 
 <!--
 https://github.com/pyaillet/twatch-idf-rs#description
 https://github.com/pyaillet/esp-idf-ble
 -->
-
----
-
-# 🔮 Next? Rust embedded
-
-<v-clicks at="0">
-
- - async/await avec embassy - https://github.com/embassy-rs/embassy
- - Autres cartes - Apache MyNewt + NimBLE - https://mynewt.apache.org/
- - RTIC - Real Time Interrupt driven Concurrency - https://rtic.rs/1/book/en/
-
-</v-clicks>
 
 ---
 
@@ -805,7 +807,6 @@ https://github.com/pyaillet/esp-idf-ble
  - Developing Embedded Rust https://www.youtube.com/watch?v=EughbCeVVxw
  - Rust sur de l’IOT ? https://www.youtube.com/watch?v=pl60zczUXt0
  - Build scripts https://www.youtube.com/watch?v=pePqWoTnSmQ
-
 
 ---
 
