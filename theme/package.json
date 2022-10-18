@@ -1,0 +1,69 @@
+{
+  "name": "slidev-theme-vuetiful",
+  "version": "0.3.1",
+  "license": "MIT",
+  "author": {
+    "name": "Thorsten Lünborg",
+    "url": "https://www.linusb.org"
+  },
+  "repository": "https://www.github.com/linusborg/slidev-theme-vuetiful",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "shiki",
+    "defaults": {
+      "fonts": {
+        "sans": "Source Sans Pro",
+        "serif": "IBM Plex Serif",
+        "mono": "IBM Plex Mono",
+        "weights": [
+          "200",
+          "400",
+          "600"
+        ]
+      },
+      "hightlighter": "shiki"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "slidev": ">=0.30.3"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.5",
+    "@iconify-json/ri": "^1.1.1",
+    "@iconify-json/uim": "^1.1.1",
+    "@linusborg/eslint-config": "^0.2.1",
+    "@slidev/cli": "^0.32.4",
+    "@slidev/types": "0.32.4",
+    "@types/node": "^16.0.0",
+    "eslint": "^8.14.0",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.2",
+    "vue": "^3.2.36"
+  },
+  "peerDependencies": {
+    "@slidev/cli": ">=0.32.4",
+    "vue": "^3.2.36"
+  },
+  "peerDependenciesMeta": {
+    "@slidev/cli": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "dev": "slidev example.md --open",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  }
+}

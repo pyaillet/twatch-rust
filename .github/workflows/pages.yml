@@ -1,0 +1,45 @@
+name: Pages
+on:
+  push:
+    branches:
+      - "*"
+    tags:
+      - "*"
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.3.0
+
+      - name: Checkout ref
+        uses: actions/checkout@v2
+        with:
+          path: ref
+
+      - name: Install and build
+        run: |
+          yarn --immutable
+          yarn build --base /twatch-rust/$(basename ${{github.ref}})/
+        working-directory: ref
+
+      - name: Checkout pages
+        uses: actions/checkout@v2
+        with:
+          ref: pages
+          path: pages
+
+      - name: Commit and push pages
+        run: |
+          dir=$(basename ${{github.ref}})
+          rm -rf $dir
+          mkdir $dir
+          mv ../ref/dist/* $dir
+          git add .
+          git diff --staged --quiet --exit-code && exit # no changes
+          git config user.name "Pierre-Yves Aillet"
+          git config user.email pyaillet@users.noreply.github.com
+          git commit --amend --no-edit
+          git push --force-with-lease
+        working-directory: pages
