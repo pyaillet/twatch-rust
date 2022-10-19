@@ -826,4 +826,4 @@ https://github.com/pyaillet/esp-idf-ble
 
 ---
 
-# Questions ?
+<img src="/questions.jpg" class="mx-50 w-100" />
