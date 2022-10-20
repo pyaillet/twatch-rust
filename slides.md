@@ -842,4 +842,13 @@ li {
 </style>
 ---
 
+# Projets
+
+- Slides : https://github.com/pyaillet/twatch-rust
+- Firmware de la montre : https://github.com/pyaillet/twatch-idf-rs
+
+- Github : https://github.com/pyaillet/
+---
+
 <img src="/questions.jpg" class="mx-50 w-100" />
+
