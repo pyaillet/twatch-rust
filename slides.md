@@ -129,7 +129,9 @@ cols: 2-1
 
 ::right::
 
-```rust {all|1,2|8|6,17|14,18|all}
+<!-- {all|1,2|8|6,17|14,18|all} -->
+`hello`
+```rust {1,2,6,8,16-19}
 #![no_std]
 #![no_main]
 
@@ -169,7 +171,9 @@ cols: 2-1
 
 ::right::
 
-```rust {9|9,12|9,14}
+<!-- {9|9,12|9,14} -->
+`blinky`
+```rust {9,12,14}
 fn main() -> ! {
     let peripherals = Peripherals::take().unwrap();
     let system = peripherals.DPORT.split();
@@ -807,23 +811,35 @@ https://github.com/pyaillet/esp-idf-ble
  - Developing Embedded Rust https://www.youtube.com/watch?v=EughbCeVVxw
  - Rust sur de l’IOT ? https://www.youtube.com/watch?v=pl60zczUXt0
  - Build scripts https://www.youtube.com/watch?v=pePqWoTnSmQ
+ - slidev https://sli.dev/
+ - Theme vuetiful https://github.com/LinusBorg/slidev-theme-vuetiful
 
 ---
 
 # Ressources / Références
 
- - [Rust Embedded Workgroup](https://github.com/rust-embedded/wg)
- - [Embedded Rust book](https://docs.rust-embedded.org/book/)
- - [Awesome embedded Rust](https://github.com/rust-embedded/awesome-embedded-rust)
- - [esp-rs book](https://esp-rs.github.io/book/)
- - [Blog de Scott Mabin](https://mabez.dev/blog/posts/)
- - [Explication du Typestate pattern](http://cliffle.com/blog/rust-typestate/) chez Cliff L. Biffle
- - [Explication d’un principe identique au typestate pattern pour un builder](https://lafor.ge/builder-rust/) chez [Akanoa](https://twitter.com/_akanoa_)
- - [Documentation officielle de esp-idf](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
- - [Organisation esp-rs](https://github.com/esp-rs) (et tous les projets liés sur Github)
- - [FreeRTOS](https://www.freertos.org/)
- - [Site officiel de la montre](http://www.lilygo.cn/products.aspx?TypeId=50053&FId=t3:50053:3)
+- Embedded Rust
+  - [Rust Embedded Workgroup](https://github.com/rust-embedded/wg)
+  - [Embedded Rust book](https://docs.rust-embedded.org/book/)
+  - [Organisation esp-rs](https://github.com/esp-rs) (et tous les projets liés sur Github)
+  - [Awesome embedded Rust](https://github.com/rust-embedded/awesome-embedded-rust)
+- Espressif Rust
+  - [Organisation esp-rs](https://github.com/esp-rs) (et tous les projets liés sur Github)
+  - [esp-rs book](https://esp-rs.github.io/book/)
+  - [Ferrous systems Espressif Training](https://espressif-trainings.ferrous-systems.com/)
+  - [Awesome ESP Rust](https://github.com/esp-rs/awesome-esp-rust)
+  - [Blog de Scott Mabin](https://mabez.dev/blog/posts/)
+  - [Explication du Typestate pattern](http://cliffle.com/blog/rust-typestate/) chez Cliff L. Biffle
+  - [Explication d’un principe identique au typestate pattern pour un builder](https://lafor.ge/builder-rust/) chez [Akanoa](https://twitter.com/_akanoa_)
+  - [Documentation officielle de esp-idf](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
+  - [FreeRTOS](https://www.freertos.org/)
+  - [Site officiel de la montre](http://www.lilygo.cn/products.aspx?TypeId=50053&FId=t3:50053:3)
 
+<style>
+li {
+  font-size: 0.9rem;
+}
+</style>
 ---
 
 <img src="/questions.jpg" class="mx-50 w-100" />
